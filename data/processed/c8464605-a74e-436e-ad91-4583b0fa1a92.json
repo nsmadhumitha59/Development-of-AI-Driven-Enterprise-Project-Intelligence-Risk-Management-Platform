@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "document_id": "c8464605-a74e-436e-ad91-4583b0fa1a92",
+    "filename": "26682109-0a3a-4059-b71c-e7a2e4c1bf85_warehouse_operations_report.pdf",
+    "original_name": "warehouse_operations_report.pdf",
+    "file_type": "pdf",
+    "file_size_bytes": 27141,
+    "file_hash": "b33a54f0cd1a3aa09526fc30bd1a456a8851d032118878ede4d26a95cc44a2cd",
+    "upload_timestamp": "2026-10-02T07:10:28.914985Z",
+    "page_count": 1,
+    "row_count": null,
+    "char_count": 699,
+    "word_count": 96,
+    "chunk_count": 0,
+    "status": "parsed",
+    "error_message": null,
+    "custom_metadata": {
+      "title": "(anonymous)",
+      "author": "(anonymous)",
+      "subject": "(unspecified)"
+    }
+  },
+  "raw_text": "Warehouse Operations Risk Report\nReporting Period: September 2026\nThe warehouse is experiencing operational issues affecting order processing and dispatch.\nObserved Risks\n1. Delivery risk: outbound shipments may be delayed because loading capacity is limited during\npeak hours.\n2. Inventory risk: stock records for several products do not match the physical count.\n3. Safety risk: two forklifts require inspection before the next operating shift.\n4. Supplier dependency: packaging material from the primary supplier is running low.\nCurrent Actions\nOperations supervisor will arrange forklift inspection. Inventory team will perform a physical recount.\nProcurement will contact an alternate supplier.\n",
+  "normalized_text": "Warehouse Operations Risk Report\nReporting Period: September 2026\nThe warehouse is experiencing operational issues affecting order processing and dispatch.\nObserved Risks\n1. Delivery risk: outbound shipments may be delayed because loading capacity is limited during\npeak hours.\n2. Inventory risk: stock records for several products do not match the physical count.\n3. Safety risk: two forklifts require inspection before the next operating shift.\n4. Supplier dependency: packaging material from the primary supplier is running low.\nCurrent Actions\nOperations supervisor will arrange forklift inspection. Inventory team will perform a physical recount.\nProcurement will contact an alternate supplier.",
+  "sections": [
+    {
+      "section_index": 0,
+      "section_title": "Page 1",
+      "page_number": 1,
+      "row_number": null,
+      "raw_text": "Warehouse Operations Risk Report\nReporting Period: September 2026\nThe warehouse is experiencing operational issues affecting order processing and dispatch.\nObserved Risks\n1. Delivery risk: outbound shipments may be delayed because loading capacity is limited during\npeak hours.\n2. Inventory risk: stock records for several products do not match the physical count.\n3. Safety risk: two forklifts require inspection before the next operating shift.\n4. Supplier dependency: packaging material from the primary supplier is running low.\nCurrent Actions\nOperations supervisor will arrange forklift inspection. Inventory team will perform a physical recount.\nProcurement will contact an alternate supplier.\n",
+      "normalized_text": "Warehouse Operations Risk Report\nReporting Period: September 2026\nThe warehouse is experiencing operational issues affecting order processing and dispatch.\nObserved Risks\n1. Delivery risk: outbound shipments may be delayed because loading capacity is limited during\npeak hours.\n2. Inventory risk: stock records for several products do not match the physical count.\n3. Safety risk: two forklifts require inspection before the next operating shift.\n4. Supplier dependency: packaging material from the primary supplier is running low.\nCurrent Actions\nOperations supervisor will arrange forklift inspection. Inventory team will perform a physical recount.\nProcurement will contact an alternate supplier."
+    }
+  ]
+}

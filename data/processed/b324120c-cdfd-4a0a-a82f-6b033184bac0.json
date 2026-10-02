@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "document_id": "b324120c-cdfd-4a0a-a82f-6b033184bac0",
+    "filename": "e1b5ca9f-581c-4f63-9128-7849e9e59da2_project_architecture_notes.txt",
+    "original_name": "project_architecture_notes.txt",
+    "file_type": "txt",
+    "file_size_bytes": 349,
+    "file_hash": "5da0f98530f656e3b19ad0707646dbd7ad92c3d4ef8cec2dd7da86ad3a759506",
+    "upload_timestamp": "2026-10-02T07:30:35.193677Z",
+    "page_count": null,
+    "row_count": null,
+    "char_count": 345,
+    "word_count": 40,
+    "chunk_count": 0,
+    "status": "parsed",
+    "error_message": null,
+    "custom_metadata": {
+      "encoding": "utf-8"
+    }
+  },
+  "raw_text": "AI Project Intelligence Architecture Overview\n\nThe system uses a multi-agent structure to provide automated risk detection, delivery forecasting, and blocker analysis for software engineering initiatives.\n\nMilestone 1 focuses on document ingestion, content normalization, sentence-transformers embedding generation, and ChromaDB vector indexing.",
+  "normalized_text": "AI Project Intelligence Architecture Overview\n\nThe system uses a multi-agent structure to provide automated risk detection, delivery forecasting, and blocker analysis for software engineering initiatives.\n\nMilestone 1 focuses on document ingestion, content normalization, sentence-transformers embedding generation, and ChromaDB vector indexing.",
+  "sections": [
+    {
+      "section_index": 0,
+      "section_title": "Section 1",
+      "page_number": null,
+      "row_number": null,
+      "raw_text": "AI Project Intelligence Architecture Overview",
+      "normalized_text": "AI Project Intelligence Architecture Overview"
+    },
+    {
+      "section_index": 1,
+      "section_title": "Section 2",
+      "page_number": null,
+      "row_number": null,
+      "raw_text": "The system uses a multi-agent structure to provide automated risk detection, delivery forecasting, and blocker analysis for software engineering initiatives.",
+      "normalized_text": "The system uses a multi-agent structure to provide automated risk detection, delivery forecasting, and blocker analysis for software engineering initiatives."
+    },
+    {
+      "section_index": 2,
+      "section_title": "Section 3",
+      "page_number": null,
+      "row_number": null,
+      "raw_text": "Milestone 1 focuses on document ingestion, content normalization, sentence-transformers embedding generation, and ChromaDB vector indexing.",
+      "normalized_text": "Milestone 1 focuses on document ingestion, content normalization, sentence-transformers embedding generation, and ChromaDB vector indexing."
+    }
+  ]
+}

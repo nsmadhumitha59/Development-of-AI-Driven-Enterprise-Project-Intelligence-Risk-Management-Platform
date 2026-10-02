@@ -1,0 +1,28 @@
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ChromaDB / Vector Store Data
+data/vectorstore/
+data/uploads/
+*.sqlite3
+*.parquet
+
+# IDE / OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

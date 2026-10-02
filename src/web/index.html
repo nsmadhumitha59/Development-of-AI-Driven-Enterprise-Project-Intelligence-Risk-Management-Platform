@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Project Intelligence &amp; Risk Advisor — Milestones 1, 2 &amp; 3</title>
+  <meta name="description" content="AI Project Intelligence & Risk Advisor: Ingestion, Multi-Agent Analytics, Documentation Generation, Health Scoring, and Conversational Q&A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="navbar">
+      <div class="brand">
+        <div class="logo-icon">⚡</div>
+        <div class="brand-text">
+          <h1>AI Project Intelligence &amp; Risk Advisor</h1>
+          <span class="badge milestone-badge">Milestone 1, 2 &amp; 3: Full Project Intelligence</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="system-status" id="systemStatus">
+          <span class="status-indicator"></span>
+          <span id="statusText">Connecting...</span>
+        </div>
+        <a href="/docs" target="_blank" class="btn btn-outline">API Docs (Swagger)</a>
+      </div>
+    </header>
+
+    <!-- Top Architecture & Metrics Banner -->
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-title">Ingested Documents</div>
+        <div class="metric-value" id="metricDocsCount">0</div>
+        <div class="metric-subtitle">PDF, DOCX, CSV, TXT</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Indexed Vector Chunks</div>
+        <div class="metric-value" id="metricChunksCount">0</div>
+        <div class="metric-subtitle">ChromaDB Persistent Index</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Project Health Score</div>
+        <div class="metric-value metric-health" id="metricHealthScore">-- / 100</div>
+        <div class="metric-subtitle" id="metricHealthStatus">Ready to Score</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-title">Intelligence Engines</div>
+        <div class="metric-value metric-db">Multi-Agent + RAG</div>
+        <div class="metric-subtitle">Docs, Health, Q&amp;A Chat</div>
+      </div>
+    </section>
+
+    <!-- Navigation Tabs for Switching Between Milestones -->
+    <nav class="portal-tabs">
+      <button class="tab-btn active" id="tabIngestion" data-target="sectionIngestion">
+        📂 Document Ingestion &amp; RAG Search (M1)
+      </button>
+      <button class="tab-btn" id="tabAgents" data-target="sectionAgents">
+        🤖 Milestone 2: Multi-Agent Intelligence
+      </button>
+      <button class="tab-btn" id="tabMilestone3" data-target="sectionMilestone3">
+        🌟 Milestone 3: Health Score, Doc Studio &amp; Chat
+      </button>
+    </nav>
+
+    <!-- Section 1: Ingestion & Search (Milestone 1) -->
+    <main class="main-layout tab-content active" id="sectionIngestion">
+      <!-- Ingestion Column -->
+      <section class="panel ingestion-panel">
+        <div class="panel-header">
+          <h2>📄 Document Ingestion Module</h2>
+          <span class="panel-caption">Upload project artifacts, PRDs, sprint CSVs, and meeting notes</span>
+        </div>
+
+        <!-- Drag & Drop Upload Zone -->
+        <div class="drop-zone" id="dropZone">
+          <input type="file" id="fileInput" multiple accept=".pdf,.docx,.csv,.txt,.md" />
+          <div class="drop-icon">📁</div>
+          <div class="drop-text">
+            <strong>Drop files here</strong> or <span class="browse-link">browse</span>
+          </div>
+          <div class="drop-hint">Supports PDF, DOCX, CSV, TXT (Batch upload supported)</div>
+        </div>
+
+        <!-- Upload Status / Queue -->
+        <div class="upload-progress-container hidden" id="uploadProgressContainer">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-label" id="progressLabel">Ingesting &amp; indexing vectors...</div>
+        </div>
+
+        <!-- Ingested Documents List -->
+        <div class="docs-section">
+          <div class="section-title-row">
+            <h3>Indexed Documents</h3>
+            <button id="btnRefreshDocs" class="btn btn-sm btn-icon" title="Refresh List">🔄 Refresh</button>
+          </div>
+
+          <div class="doc-list" id="docList">
+            <div class="empty-state">No documents ingested yet. Upload files above to begin.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Semantic RAG Retrieval Column -->
+      <section class="panel rag-panel">
+        <div class="panel-header">
+          <h2>🔍 RAG Semantic Retrieval</h2>
+          <span class="panel-caption">Test contextual retrieval from indexed project knowledge</span>
+        </div>
+
+        <form class="search-form" id="searchForm">
+          <div class="search-input-wrapper">
+            <input 
+              type="text" 
+              id="queryInput" 
+              class="search-input" 
+              placeholder="e.g. What are the key architecture decisions and sprint deadlines?" 
+              required
+            />
+            <button type="submit" class="btn btn-primary" id="btnSearch">
+              <span>Query Vector Index</span>
+            </button>
+          </div>
+
+          <div class="search-options">
+            <div class="option-group">
+              <label for="topKSelect">Top K Results:</label>
+              <select id="topKSelect">
+                <option value="3">3 Chunks</option>
+                <option value="5" selected>5 Chunks</option>
+                <option value="10">10 Chunks</option>
+              </select>
+            </div>
+            <div class="option-group">
+              <label for="filterDocSelect">Filter Document:</label>
+              <select id="filterDocSelect">
+                <option value="">All Documents</option>
+              </select>
+            </div>
+            <div class="option-group">
+              <label for="filterTypeSelect">File Type:</label>
+              <select id="filterTypeSelect">
+                <option value="">All Types</option>
+                <option value="pdf">PDF</option>
+                <option value="docx">DOCX</option>
+                <option value="csv">CSV</option>
+                <option value="txt">TXT</option>
+              </select>
+            </div>
+          </div>
+        </form>
+
+        <!-- Search Results Header & Container -->
+        <div class="results-wrapper">
+          <div class="results-header" id="resultsHeader" style="display: none;">
+            <div class="results-meta">
+              Found <strong id="resultsCount">0</strong> matches in <span id="queryTime">0ms</span>
+            </div>
+          </div>
+
+          <div class="results-list" id="resultsList">
+            <div class="empty-state">
+              Enter a natural language search query above to test semantic vector retrieval.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Section 2: Milestone 2 Multi-Agent Intelligence -->
+    <main class="agent-layout tab-content" id="sectionAgents">
+      <!-- Agent Execution Toolbar -->
+      <section class="panel agent-control-panel">
+        <div class="agent-control-header">
+          <div>
+            <h2>🤖 Milestone 2 Specialized Intelligence Agents</h2>
+            <span class="panel-caption">Grounds structured insights over uploaded PDF, DOCX, CSV, and TXT artifacts via RAG</span>
+          </div>
+          <div class="agent-action-buttons">
+            <button class="btn btn-agent" id="btnRunScopeAgent">🎯 Scope &amp; Deliverables Agent</button>
+            <button class="btn btn-agent" id="btnRunRiskAgent">⚠️ Risk &amp; Forecast Agent</button>
+            <button class="btn btn-agent" id="btnRunBlockerAgent">🚧 Blocker &amp; Actions Agent</button>
+            <button class="btn btn-primary" id="btnRunAllAgents">🚀 Run Full Multi-Agent Pipeline</button>
+          </div>
+        </div>
+
+        <div class="agent-filter-row">
+          <input 
+            type="text" 
+            id="agentFocusInput" 
+            class="search-input" 
+            placeholder="Optional focus context (e.g. 'Authentication module' or 'Sprint 4 release risks')" 
+          />
+        </div>
+      </section>
+
+      <!-- Agent Results Container -->
+      <section class="panel agent-results-panel">
+        <div class="agent-status-header" id="agentStatusHeader">
+          <h3 id="agentReportTitle">Agent Intelligence Output</h3>
+          <span class="agent-exec-time" id="agentExecTime">Ready to execute</span>
+        </div>
+
+        <div class="agent-output-container" id="agentOutputContainer">
+          <div class="empty-state">
+            Click any of the agent buttons above to analyze your ingested documents and generate structured project intelligence.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Section 3: Milestone 3 - Health Scoring, Doc Generation & Chatbot -->
+    <main class="m3-layout tab-content" id="sectionMilestone3">
+      <!-- M3 Sub-Navigation Tabs -->
+      <div class="m3-subtabs">
+        <button class="m3-subtab-btn active" id="btnSubtabHealth" data-view="viewHealth">
+          🚦 Project Health Scorecard
+        </button>
+        <button class="m3-subtab-btn" id="btnSubtabDocs" data-view="viewDocs">
+          📋 Documentation Generation Studio
+        </button>
+        <button class="m3-subtab-btn" id="btnSubtabChat" data-view="viewChat">
+          💬 Conversational Project Assistant (Q&amp;A)
+        </button>
+      </div>
+
+      <!-- View 1: Project Health Scorecard -->
+      <div class="m3-view active" id="viewHealth">
+        <section class="panel health-panel">
+          <div class="panel-header" style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <h2>🚦 Grounded Project Health Scorecard</h2>
+              <span class="panel-caption">Multi-dimensional diagnostic scoring synthesized from Scope, Timeline, and Blocker agents</span>
+            </div>
+            <button class="btn btn-primary" id="btnCalculateHealth">🔄 Calculate Project Health</button>
+          </div>
+
+          <div id="healthResultsContainer">
+            <div class="empty-state">
+              Click <strong>"Calculate Project Health"</strong> to generate an overall health score and diagnostic dimension breakdown across your ingested documents.
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- View 2: Documentation Generation Studio -->
+      <div class="m3-view" id="viewDocs">
+        <section class="panel docgen-panel">
+          <div class="panel-header">
+            <div class="docgen-header-row">
+              <div>
+                <h2>📋 Grounded Documentation Generator</h2>
+                <span class="panel-caption">Synthesizes User Stories, Enterprise Risk Registers, and Action Checklists grounded in RAG artifacts</span>
+              </div>
+              <div class="docgen-actions">
+                <button class="btn btn-agent" id="btnGenStories">📖 User Stories</button>
+                <button class="btn btn-agent" id="btnGenRisks">🛡️ Risk Register</button>
+                <button class="btn btn-agent" id="btnGenActions">✅ Action Items</button>
+                <button class="btn btn-primary" id="btnGenAllDocs">🚀 Generate All Docs</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="docgen-filter-row">
+            <input 
+              type="text" 
+              id="docGenFocusInput" 
+              class="search-input" 
+              placeholder="Optional focus context (e.g. 'Event Planning', 'Operations', or 'Sprint 2')" 
+            />
+          </div>
+
+          <div class="docgen-results-wrapper">
+            <div class="docgen-status-header" id="docGenStatusHeader">
+              <h3 id="docGenReportTitle">Generated Documentation Output</h3>
+              <span class="docgen-exec-time" id="docGenExecTime">Ready to generate</span>
+            </div>
+
+            <div class="docgen-output-container" id="docGenOutputContainer">
+              <div class="empty-state">
+                Choose a document type above to generate structured Agile User Stories, Risk Registers, or Action Item lists.
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- View 3: Conversational Intelligence Assistant -->
+      <div class="m3-view" id="viewChat">
+        <section class="panel chat-panel">
+          <div class="panel-header">
+            <h2>💬 Conversational Project Intelligence Assistant</h2>
+            <span class="panel-caption">RAG-powered conversational assistant with grounded document provenance and zero hallucination</span>
+          </div>
+
+          <!-- Quick Prompts Chips -->
+          <div class="quick-prompts-row">
+            <span class="quick-prompt-label">Quick Questions:</span>
+            <button class="chip-btn" data-query="Are we on track?">🚦 Are we on track?</button>
+            <button class="chip-btn" data-query="What are our biggest risks?">⚠️ What are our biggest risks?</button>
+            <button class="chip-btn" data-query="What are the current blockers?">🛑 What are the current blockers?</button>
+            <button class="chip-btn" data-query="What are the pending action items?">✅ What are the pending action items?</button>
+            <button class="chip-btn" data-query="What are the project deliverables?">🎯 What are the project deliverables?</button>
+          </div>
+
+          <!-- Chat Stream Container -->
+          <div class="chat-messages-container" id="chatMessagesContainer">
+            <div class="chat-message assistant-message">
+              <div class="message-avatar">🤖</div>
+              <div class="message-content">
+                <p><strong>Hello! I am your Project Intelligence Assistant.</strong></p>
+                <p>I can analyze all your uploaded project artifacts (PDF, DOCX, CSV, TXT) and answer questions about delivery timelines, active blockers, risk mitigations, and deliverables with direct document references.</p>
+                <p>How can I help you today?</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Input Form -->
+          <form class="chat-input-form" id="chatInputForm">
+            <div class="chat-input-wrapper">
+              <input 
+                type="text" 
+                id="chatInput" 
+                class="chat-input" 
+                placeholder="Ask anything about the project (e.g. 'What are the main risks for the upcoming release?')" 
+                required 
+              />
+              <button type="submit" class="btn btn-primary" id="btnSendChat">
+                <span>Send ➔</span>
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <!-- Document Preview Modal -->
+    <div class="modal-overlay hidden" id="docModal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 id="modalDocTitle">Document Details</h3>
+          <button class="btn-close" id="btnModalClose">&times;</button>
+        </div>
+        <div class="modal-body" id="modalDocBody">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "document_id": "d950a794-7fac-4e1a-b5ad-bf92760f248f",
+    "filename": "401a614f-1788-47bc-8fb5-fee1e5250c9e_hotel_operations_meeting_notes.txt",
+    "original_name": "hotel_operations_meeting_notes.txt",
+    "file_type": "txt",
+    "file_size_bytes": 1023,
+    "file_hash": "ae15b13a9c0cb962a856cb72cba925fd50102ce7415cf0e63fc2f5351f481007",
+    "upload_timestamp": "2026-10-02T07:10:28.697078Z",
+    "page_count": null,
+    "row_count": null,
+    "char_count": 1022,
+    "word_count": 153,
+    "chunk_count": 0,
+    "status": "parsed",
+    "error_message": null,
+    "custom_metadata": {
+      "encoding": "utf-8"
+    }
+  },
+  "raw_text": "HOTEL OPERATIONS - WEEKLY MEETING NOTES\nDate: September 16, 2026\n\nCurrent Issues:\n- Three rooms are unavailable because maintenance work is incomplete.\n- The laundry supplier may deliver one day late.\n- The night-shift team has two unfilled positions.\n- The backup generator test has not been completed.\n\nRisks Identified:\n- Guest service risk: room availability may be reduced during the weekend.\n- Supplier dependency risk: delayed linen delivery could affect housekeeping.\n- Staffing risk: the night shift may not have enough staff.\n- Equipment risk: an untested generator could affect emergency power readiness.\n\nBlockers:\n- Maintenance is waiting for a replacement part.\n- HR has not finalized the two night-shift hires.\n- Facilities has not received confirmation for the generator test.\n\nAction Items:\n- Maintenance lead: confirm replacement-part arrival.\n- HR coordinator: provide hiring status by Friday.\n- Facilities manager: schedule the generator test.\n- Housekeeping supervisor: prepare a temporary linen plan.\n",
+  "normalized_text": "HOTEL OPERATIONS - WEEKLY MEETING NOTES\nDate: September 16, 2026\n\nCurrent Issues:\n- Three rooms are unavailable because maintenance work is incomplete.\n- The laundry supplier may deliver one day late.\n- The night-shift team has two unfilled positions.\n- The backup generator test has not been completed.\n\nRisks Identified:\n- Guest service risk: room availability may be reduced during the weekend.\n- Supplier dependency risk: delayed linen delivery could affect housekeeping.\n- Staffing risk: the night shift may not have enough staff.\n- Equipment risk: an untested generator could affect emergency power readiness.\n\nBlockers:\n- Maintenance is waiting for a replacement part.\n- HR has not finalized the two night-shift hires.\n- Facilities has not received confirmation for the generator test.\n\nAction Items:\n- Maintenance lead: confirm replacement-part arrival.\n- HR coordinator: provide hiring status by Friday.\n- Facilities manager: schedule the generator test.\n- Housekeeping supervisor: prepare a temporary linen plan.",
+  "sections": [
+    {
+      "section_index": 0,
+      "section_title": "Section 1",
+      "page_number": null,
+      "row_number": null,
+      "raw_text": "HOTEL OPERATIONS - WEEKLY MEETING NOTES\nDate: September 16, 2026",
+      "normalized_text": "HOTEL OPERATIONS - WEEKLY MEETING NOTES\nDate: September 16, 2026"
+    },
+    {
+      "section_index": 1,
+      "section_title": "Section 2",
+      "page_number": null,
+      "row_number": null,
+      "raw_text": "Current Issues:\n- Three rooms are unavailable because maintenance work is incomplete.\n- The laundry supplier may deliver one day late.\n- The night-shift team has two unfilled positions.\n- The backup generator test has not been completed.",
+      "normalized_text": "Current Issues:\n- Three rooms are unavailable because maintenance work is incomplete.\n- The laundry supplier may deliver one day late.\n- The night-shift team has two unfilled positions.\n- The backup generator test has not been completed."
+    },
+    {
+      "section_index": 2,
+      "section_title": "Section 3",
+      "page_number": null,
+      "row_number": null,
+      "raw_text": "Risks Identified:\n- Guest service risk: room availability may be reduced during the weekend.\n- Supplier dependency risk: delayed linen delivery could affect housekeeping.\n- Staffing risk: the night shift may not have enough staff.\n- Equipment risk: an untested generator could affect emergency power readiness.",
+      "normalized_text": "Risks Identified:\n- Guest service risk: room availability may be reduced during the weekend.\n- Supplier dependency risk: delayed linen delivery could affect housekeeping.\n- Staffing risk: the night shift may not have enough staff.\n- Equipment risk: an untested generator could affect emergency power readiness."
+    },
+    {
+      "section_index": 3,
+      "section_title": "Section 4",
+      "page_number": null,
+      "row_number": null,
+      "raw_text": "Blockers:\n- Maintenance is waiting for a replacement part.\n- HR has not finalized the two night-shift hires.\n- Facilities has not received confirmation for the generator test.",
+      "normalized_text": "Blockers:\n- Maintenance is waiting for a replacement part.\n- HR has not finalized the two night-shift hires.\n- Facilities has not received confirmation for the generator test."
+    },
+    {
+      "section_index": 4,
+      "section_title": "Section 5",
+      "page_number": null,
+      "row_number": null,
+      "raw_text": "Action Items:\n- Maintenance lead: confirm replacement-part arrival.\n- HR coordinator: provide hiring status by Friday.\n- Facilities manager: schedule the generator test.\n- Housekeeping supervisor: prepare a temporary linen plan.",
+      "normalized_text": "Action Items:\n- Maintenance lead: confirm replacement-part arrival.\n- HR coordinator: provide hiring status by Friday.\n- Facilities manager: schedule the generator test.\n- Housekeeping supervisor: prepare a temporary linen plan."
+    }
+  ]
+}

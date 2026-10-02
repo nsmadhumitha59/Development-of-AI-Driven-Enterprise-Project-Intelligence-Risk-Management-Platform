@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "document_id": "0acec3af-bf91-4ca8-ba47-56abf6e17aa2",
+    "filename": "1b373634-3eb8-4c19-970e-1839aacc98bf_retail_store_risk_log (1).csv",
+    "original_name": "retail_store_risk_log (1).csv",
+    "file_type": "csv",
+    "file_size_bytes": 575,
+    "file_hash": "62603a1643e4f7518363254fa30d4f1f751a8d645bae77ca61d124d594a3b4ae",
+    "upload_timestamp": "2026-10-02T07:10:28.767533Z",
+    "page_count": null,
+    "row_count": 5,
+    "char_count": 1091,
+    "word_count": 134,
+    "chunk_count": 0,
+    "status": "parsed",
+    "error_message": null,
+    "custom_metadata": {
+      "columns": [
+        "Risk_ID",
+        "Risk",
+        "Category",
+        "Severity",
+        "Description",
+        "Owner",
+        "Status"
+      ],
+      "total_columns": 7,
+      "total_rows": 5
+    }
+  },
+  "raw_text": "CSV Dataset: 1b373634-3eb8-4c19-970e-1839aacc98bf_retail_store_risk_log (1).csv\nTotal Records: 5, Total Columns: 7\nColumn Headers: Risk_ID, Risk, Category, Severity, Description, Owner, Status\nRow 1: Risk_ID: R-101; Risk: Stock discrepancy; Category: Inventory; Severity: High; Description: Physical count differs from system quantity; Owner: Inventory Team; Status: Open\nRow 2: Risk_ID: R-102; Risk: POS downtime; Category: Technology; Severity: Critical; Description: Checkout terminals may stop processing transactions; Owner: IT Support; Status: Investigating\nRow 3: Risk_ID: R-103; Risk: Supplier delay; Category: Supply Chain; Severity: Medium; Description: Weekly delivery may arrive two days late; Owner: Procurement; Status: Open\nRow 4: Risk_ID: R-104; Risk: Staff shortage; Category: Operations; Severity: High; Description: Not enough staff for weekend peak hours; Owner: Store Manager; Status: Open\nRow 5: Risk_ID: R-105; Risk: Equipment inspection; Category: Safety; Severity: Medium; Description: Emergency exit equipment requires inspection; Owner: Facilities; Status: Pending",
+  "normalized_text": "CSV Dataset: 1b373634-3eb8-4c19-970e-1839aacc98bf_retail_store_risk_log (1).csv\nTotal Records: 5, Total Columns: 7\nColumn Headers: Risk_ID, Risk, Category, Severity, Description, Owner, Status\nRow 1: Risk_ID: R-101; Risk: Stock discrepancy; Category: Inventory; Severity: High; Description: Physical count differs from system quantity; Owner: Inventory Team; Status: Open\nRow 2: Risk_ID: R-102; Risk: POS downtime; Category: Technology; Severity: Critical; Description: Checkout terminals may stop processing transactions; Owner: IT Support; Status: Investigating\nRow 3: Risk_ID: R-103; Risk: Supplier delay; Category: Supply Chain; Severity: Medium; Description: Weekly delivery may arrive two days late; Owner: Procurement; Status: Open\nRow 4: Risk_ID: R-104; Risk: Staff shortage; Category: Operations; Severity: High; Description: Not enough staff for weekend peak hours; Owner: Store Manager; Status: Open\nRow 5: Risk_ID: R-105; Risk: Equipment inspection; Category: Safety; Severity: Medium; Description: Emergency exit equipment requires inspection; Owner: Facilities; Status: Pending",
+  "sections": [
+    {
+      "section_index": 0,
+      "section_title": "Dataset Summary & Schema",
+      "page_number": null,
+      "row_number": 0,
+      "raw_text": "CSV Dataset: 1b373634-3eb8-4c19-970e-1839aacc98bf_retail_store_risk_log (1).csv\nTotal Records: 5, Total Columns: 7\nColumn Headers: Risk_ID, Risk, Category, Severity, Description, Owner, Status",
+      "normalized_text": "CSV Dataset: 1b373634-3eb8-4c19-970e-1839aacc98bf_retail_store_risk_log (1).csv\nTotal Records: 5, Total Columns: 7\nColumn Headers: Risk_ID, Risk, Category, Severity, Description, Owner, Status"
+    },
+    {
+      "section_index": 1,
+      "section_title": "Record 1",
+      "page_number": null,
+      "row_number": 1,
+      "raw_text": "Row 1: Risk_ID: R-101; Risk: Stock discrepancy; Category: Inventory; Severity: High; Description: Physical count differs from system quantity; Owner: Inventory Team; Status: Open",
+      "normalized_text": "Row 1: Risk_ID: R-101; Risk: Stock discrepancy; Category: Inventory; Severity: High; Description: Physical count differs from system quantity; Owner: Inventory Team; Status: Open"
+    },
+    {
+      "section_index": 2,
+      "section_title": "Record 2",
+      "page_number": null,
+      "row_number": 2,
+      "raw_text": "Row 2: Risk_ID: R-102; Risk: POS downtime; Category: Technology; Severity: Critical; Description: Checkout terminals may stop processing transactions; Owner: IT Support; Status: Investigating",
+      "normalized_text": "Row 2: Risk_ID: R-102; Risk: POS downtime; Category: Technology; Severity: Critical; Description: Checkout terminals may stop processing transactions; Owner: IT Support; Status: Investigating"
+    },
+    {
+      "section_index": 3,
+      "section_title": "Record 3",
+      "page_number": null,
+      "row_number": 3,
+      "raw_text": "Row 3: Risk_ID: R-103; Risk: Supplier delay; Category: Supply Chain; Severity: Medium; Description: Weekly delivery may arrive two days late; Owner: Procurement; Status: Open",
+      "normalized_text": "Row 3: Risk_ID: R-103; Risk: Supplier delay; Category: Supply Chain; Severity: Medium; Description: Weekly delivery may arrive two days late; Owner: Procurement; Status: Open"
+    },
+    {
+      "section_index": 4,
+      "section_title": "Record 4",
+      "page_number": null,
+      "row_number": 4,
+      "raw_text": "Row 4: Risk_ID: R-104; Risk: Staff shortage; Category: Operations; Severity: High; Description: Not enough staff for weekend peak hours; Owner: Store Manager; Status: Open",
+      "normalized_text": "Row 4: Risk_ID: R-104; Risk: Staff shortage; Category: Operations; Severity: High; Description: Not enough staff for weekend peak hours; Owner: Store Manager; Status: Open"
+    },
+    {
+      "section_index": 5,
+      "section_title": "Record 5",
+      "page_number": null,
+      "row_number": 5,
+      "raw_text": "Row 5: Risk_ID: R-105; Risk: Equipment inspection; Category: Safety; Severity: Medium; Description: Emergency exit equipment requires inspection; Owner: Facilities; Status: Pending",
+      "normalized_text": "Row 5: Risk_ID: R-105; Risk: Equipment inspection; Category: Safety; Severity: Medium; Description: Emergency exit equipment requires inspection; Owner: Facilities; Status: Pending"
+    }
+  ]
+}
