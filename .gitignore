@@ -1,10 +1,10 @@
-# Environments
+# Python / Virtual Environments
 .venv/
 env/
 venv/
 ENV/
 
-# Python cache
+# Python Cache & Coverage
 __pycache__/
 *.py[cod]
 *$py.class
@@ -15,8 +15,15 @@ htmlcov/
 # ChromaDB / Vector Store Data
 data/vectorstore/
 data/uploads/
+backend/data/
+backend/sample_data/
 *.sqlite3
 *.parquet
+
+# Node / Frontend (if applicable)
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
 
 # IDE / OS Files
 .vscode/
